@@ -1,0 +1,14 @@
+{% load endless %}
+{% paginate cities %}
+{% for city in cities %}
+	<div class="media">
+	  <a class="pull-left" href="#">
+	    <img class="media-object" src="http://www.renitech.com/wp-content/uploads/2009/06/64px-live_mesh1.png"/>
+	  </a>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{ city.name}}</h4>
+	    <p>{{ city.description}}</p>
+	  </div>
+	</div>
+{% endfor %}
+{% show_more %}
